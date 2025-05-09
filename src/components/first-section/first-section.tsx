@@ -1,13 +1,14 @@
 import Image from "next/image"
-import CustomButton from "../custom-button/custom-button"
+import CustomButton from "@/components/custom-button/custom-button"
+import { imageListFirstSection } from "@/data/image-list-first-section"
 
-export default function FirstSection() {
+export default async function FirstSection() {
     return(
         <section className="flex items-center justify-center w-full">
             <div className="container flex items-center justify-between pt-20 pb-20">
-                <div className="flex flex-col w-5/12 bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:205px_20px] bg-[position:5px_65px] gap-16">
+                <div className="flex flex-col w-[45%] bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:205px_20px] bg-[position:5px_65px] gap-16">
                     <h2>Teach students worldwide</h2>
-                    <p>
+                    <p className="text-section-1">
                         Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.
                     </p>
                     <div className="flex items-center gap-8">
@@ -27,10 +28,27 @@ export default function FirstSection() {
                                 Trusted by <br /> leading companies
                             </span>
                         </div>
-                        <div></div>
+                        <div className="flex items-center justify-between gap-10">
+                            {imageListFirstSection.map((image, index) => (
+                                <Image
+                                    key={index}
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={30}
+                                    height={30}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
-                <div className="w-5/12"></div>
+                <div className="w-1/2 flex items-center justify-center">
+                    <Image
+                        src="/Group-50.png"
+                        alt="Group"
+                        width={900}
+                        height={900}
+                    />
+                </div>
             </div>
         </section>
     )

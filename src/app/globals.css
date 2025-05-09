@@ -2,15 +2,21 @@
 
 h2 {
     font-weight: 800;
-    font-size: 72px;
+    font-size: 66px;
     line-height: 110.00000000000001%;
     letter-spacing: 0%;
 }
 
-p {
-    font-family: Roboto;
+.text-section-1 {
     font-weight: 400;
     font-size: 24px;
     line-height: 160%;
+    letter-spacing: 0%;
+}
+
+.text-section-2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
     letter-spacing: 0%;
 }

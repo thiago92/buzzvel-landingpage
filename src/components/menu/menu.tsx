@@ -1,7 +1,7 @@
 import Image from "next/image"
 import CustomButton from "../custom-button/custom-button"
 
-export default function Menu() {
+export default async function Menu() {
     return (
         <header className="flex items-center justify-center bg-white h-40">
             <div className="container flex flex-row items-center justify-between">
