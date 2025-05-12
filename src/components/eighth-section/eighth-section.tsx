@@ -20,7 +20,7 @@ export default async function EighthSection() {
                     Malesuada ut aliquam at ac est nisi, interdum etiam dignissim. <br />
                     Risus elit et fringilla habitant ut facilisi.
                 </p>
-                <CustomButton text="Sign Up Now"  className="bg-[#EA580C] text-white text-[24px] font-[700] rounded-[8px] pt-[16px] pb-[16px] pl-[38px] pr-[38px] cursor-pointer"/>
+                <CustomButton text="Sign Up Now"  className="bg-[#EA580C] hover:bg-[#EA580C]/80 text-white text-[24px] font-[700] rounded-[8px] pt-[16px] pb-[16px] pl-[38px] pr-[38px] cursor-pointer"/>
             </div>
             <div className="w-1/3  h-[636px]">
                 <Image

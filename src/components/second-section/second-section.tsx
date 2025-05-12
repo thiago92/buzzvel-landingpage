@@ -39,7 +39,7 @@ export default async function SecondSection() {
                         width={900}
                         height={900}
                     />
-                    <div className="flex items-center justify-around w-full mt-[-200px] pl-[60px] pr-[60px]">
+                    <div className="flex items-center justify-center w-full mt-[-180px] gap-[20px]">
                         {cardListSecontSection.map((text, index) => (
                             <div key={index} className="flex flex-col items-start justify-between p-[14px] bg-white rounded-[10px] w-[200.33px] h-[232px] max-h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
                                 <span className={`${text.spanBackgroundColor} ${text.spanTextColor} rounded-[4px] p-[4px] font-[400] text-[14px]`}>

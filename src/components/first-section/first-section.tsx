@@ -5,8 +5,8 @@ import { imageListFirstSection } from "@/data/image-list-first-section"
 export default async function FirstSection() {
     return(
         <section className="flex items-center justify-center w-full">
-            <div className="container flex items-center justify-between pt-20 pb-20">
-                <div className="flex flex-col w-[45%] bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:205px_20px] bg-[position:5px_65px] gap-16">
+            <div className="container flex items-center justify-between lg:pt-20 lg:pb-20 py-[48px] px-[16px]">
+                <div className="flex flex-col lg:w-[45%] w-[100%] bg-[url(/Vector-14.png)] bg-no-repeat lg:bg-[length:205px_20px] lg:bg-[position:5px_65px] bg-[length:115px_17.5px] bg-[position:0px_35px] gap-16">
                     <h2>Teach students worldwide</h2>
                     <p className="text-[24px] font-[400]">
                         Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.
@@ -41,7 +41,7 @@ export default async function FirstSection() {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 flex items-center justify-center">
+                <div className="lg:w-1/2 w-[100%] flex items-center justify-center">
                     <Image
                         src="/Group-50.png"
                         alt="Group"

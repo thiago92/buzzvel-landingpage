@@ -6,8 +6,8 @@ export default async function SeventhSection() {
     return(
         <section className="flex items-center justify-center w-full h-[706.97px]">
             <div className="container flex items-center justify-between pt-20 pb-20">
-                <div className="flex flex-col justify-center w-[50%] bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:275px_30px] bg-[position:380px_55px] gap-10">
-                    <h2>All the cool features</h2>
+                <div className="flex flex-col justify-center w-[50%] bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:275px_30px] bg-[position:380px_55px] gap-10 z-10">
+                    <h2 className="whitespace-nowrap">All the cool features</h2>
                     <p className="text-[24px] font-[400]">
                         Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et dolor eu donec maecenas nulla. Cum sed orci, sit pellentesque quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper non viverra a, neque orci.
                     </p>
@@ -23,14 +23,14 @@ export default async function SeventhSection() {
                         />
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col items-center justify-center mt-[-300px]">
+                <div className="w-1/2 flex flex-col items-center justify-center mt-[-300px] z-1">
                     <Image
                         src="/group-2.png"
                         alt="Group"
                         width={900}
                         height={900}
                     />
-                    <div className="flex items-start justify-start w-full mt-[-495px] ml-[200px] pl-[60px] pr-[60px]">
+                    <div className="flex items-start justify-start w-full 2xl:mt-[-495px] mt-[-450px] 2xl:ml-[200px] ml-[100px] pl-[60px] pr-[60px]">
                         <div className="flex flex-col items-start justify-between p-[14px] bg-white rounded-[10px] w-[200.33px] h-[232px] max-h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
                             <span className="bg-[#DBEAFE] text-[#1E40AF] rounded-[4px] p-[4px] font-[400] text-[14px]">
                                 Popular
