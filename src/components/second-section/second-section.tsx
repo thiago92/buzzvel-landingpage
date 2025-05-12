@@ -1,6 +1,7 @@
 import Image from "next/image"
 import CustomButton from "@/components/custom-button/custom-button"
 import { textListSecondSection } from "@/data/text-list-second-section"
+import { cardListSecontSection } from "@/data/card-list-second-section"
 
 export default async function SecondSection() {
 
@@ -38,19 +39,21 @@ export default async function SecondSection() {
                         width={900}
                         height={900}
                     />
-                    <div className="flex items-center justify-between w-full">
-                        <div className="flex flex-col items-start justify-between p-[14px] bg-white rounded-[10px] w-[200.33px] h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
-                            <span className="bg-[#F3E8FF] rounded-[4px] p-[4px] font-[400] text-[14px] text-[#6B21A8]">
-                                Featured
-                            </span>
-                            <h3>
-                                The map of mathematics
-                            </h3>
-                            <p className="text-[14px] font-[400] text-[#0F172A]">
-                                Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.
-                            </p>
-                            <CustomButton text="Take Lesson" className="pr-[12px] pl-[12px] pt-[8px] pb-[8px] rounded-[8px] border-[2px] border-[#2563EB] font-[500] text-[14px] text-[#2563EB] w-full"/>
-                        </div>
+                    <div className="flex items-center justify-around w-full mt-[-200px] pl-[60px] pr-[60px]">
+                        {cardListSecontSection.map((text, index) => (
+                            <div key={index} className="flex flex-col items-start justify-between p-[14px] bg-white rounded-[10px] w-[200.33px] h-[232px] max-h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
+                                <span className={`${text.spanBackgroundColor} ${text.spanTextColor} rounded-[4px] p-[4px] font-[400] text-[14px]`}>
+                                    {text.span}
+                                </span>
+                                <h3>
+                                    {text.title}
+                                </h3>
+                                <p className="text-[14px] font-[400] text-[#0F172A]">
+                                    {text.p}
+                                </p>
+                                <CustomButton text={text.button} className="pr-[12px] pl-[12px] pt-[8px] pb-[8px] rounded-[8px] border-[2px] border-[#2563EB] font-[500] text-[14px] text-[#2563EB] w-full"/>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
