@@ -3,6 +3,7 @@ export interface CustomButtonProps {
     text: string;
     img?: ImgProps;
     imgPosition?: "left" | "right";
+    onClick?: () => void;
 }
 
 interface ImgProps {

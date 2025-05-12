@@ -1,14 +1,15 @@
 import { CustomButtonProps } from "@/interface/custom-Button-Props";
 import Image from "next/image";
   
-export default async function CustomButton({ 
+export default function CustomButton({ 
     className = "", 
     text, 
     img,
-    imgPosition = "left"
+    imgPosition = "left",
+    onClick
 }: CustomButtonProps) {
     return (
-        <button className={className}>
+        <button className={className} onClick={onClick}>
             {img && imgPosition === "left" && (
                 <Image
                 src={img.src}

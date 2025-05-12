@@ -13,17 +13,21 @@ import Footer from "@/components/footer/footer";
 export default async function Home() {
   return (
     <>
-      <Menu />
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <ForthSection />
-      <FifthSection />
-      <SixthSection />
-      <SeventhSection />
-      <EighthSection />
-      <NinthSection />
-      <Footer />
+      <div className="z-10">
+        <Menu />
+      </div>
+      <div className="z-1">
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+        <ForthSection />
+        <FifthSection />
+        <SixthSection />
+        <SeventhSection />
+        <EighthSection />
+        <NinthSection />
+        <Footer />
+      </div>
     </>
   );
 }
