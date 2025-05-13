@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Buzzvel Landing Page
+
+A modern and responsive landing page built with **Next.js**, **Tailwind CSS**, and **Framer Motion**.
+
+---
+
+## 🧰 Technologies Used
+
+- [Next.js 14+](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/) (configured with **tab indentation** support)
+- [Custom Components](./src/components)
+- [Mobile-First Responsive Design](https://tailwindcss.com/docs/responsive-design)
+
+---
+
+## ⚙️ How to Run the Project Locally
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/buzzvel-landingpage.git
 
 ## Getting Started
 
