@@ -11,19 +11,19 @@ import NinthSection from "@/components/ninth-section/ninth.section";
 import Footer from "@/components/footer/footer";
 
 export default async function Home() {
-  return (
-    <>
-        <Menu />
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <ForthSection />
-        <FifthSection />
-        <SixthSection />
-        <SeventhSection />
-        <EighthSection />
-        <NinthSection />
-        <Footer />
-    </>
-  );
+	return (
+		<>
+			<Menu />
+			<FirstSection />
+			<SecondSection />
+			<ThirdSection />
+			<ForthSection />
+			<FifthSection />
+			<SixthSection />
+			<SeventhSection />
+			<EighthSection />
+			<NinthSection />
+			<Footer />
+		</>
+	);
 }
