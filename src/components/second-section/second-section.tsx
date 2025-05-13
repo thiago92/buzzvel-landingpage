@@ -1,15 +1,15 @@
 import Image from "next/image"
 import CustomButton from "@/components/custom-button/custom-button"
 import { textListSecondSection } from "@/data/text-list-second-section"
-import { cardListSecontSection } from "@/data/card-list-second-section"
+import { cardListSecontSection, cardListSecontSectionMobile } from "@/data/card-list-second-section"
 
 export default async function SecondSection() {
 
     return(
-        <section className="flex items-center justify-center w-full h-[706.97px]">
-            <div className="container flex items-center justify-between pt-20 pb-20">
-                <div className="flex flex-col w-[50%] bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:325px_30px] bg-[position:100px_55px] gap-10">
-                    <h2>An all-in-one app that makes it easier</h2>
+        <section className="flex items-center justify-center w-full h-[706.97px] lg:mt-0 mt-[120px]">
+            <div className="container flex lg:flex-row flex-col items-center justify-between pt-20 pb-20 px-[15px]">
+                <div className="flex flex-col lg:w-[50%] w-full bg-[url(/Vector-14.png)] bg-no-repeat lg:bg-[length:275px_25px] lg:bg-[position:90px_45px] bg-[length:115px_8px] bg-[position:35px_20px] gap-10">
+                    <h3>An all-in-one app that makes it easier</h3>
                     <div>
                         {textListSecondSection.map((text, index) => (
                             <div key={index} className="flex items-center gap-4">
@@ -32,23 +32,39 @@ export default async function SecondSection() {
                         />
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col items-center justify-center">
+                <div className="lg:w-1/2 w-full flex flex-col items-center justify-center">
                     <Image
                         src="/desktop-blob.png"
                         alt="Group"
                         width={900}
                         height={900}
                     />
-                    <div className="flex items-center justify-center w-full mt-[-180px] gap-[20px]">
+                    <div className="hidden lg:flex items-center justify-center w-full lg:mt-[-180px] mt-0 gap-[20px]">
                         {cardListSecontSection.map((text, index) => (
                             <div key={index} className="flex flex-col items-start justify-between p-[14px] bg-white rounded-[10px] w-[200.33px] h-[232px] max-h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
                                 <span className={`${text.spanBackgroundColor} ${text.spanTextColor} rounded-[4px] p-[4px] font-[400] text-[14px]`}>
                                     {text.span}
                                 </span>
-                                <h3>
+                                <h4>
                                     {text.title}
-                                </h3>
+                                </h4>
                                 <p className="text-[14px] font-[400] text-[#0F172A]">
+                                    {text.p}
+                                </p>
+                                <CustomButton text={text.button} className="pr-[12px] pl-[12px] pt-[8px] pb-[8px] rounded-[8px] border-[2px] border-[#2563EB] font-[500] text-[14px] text-[#2563EB] w-full"/>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex lg:hidden items-center justify-center w-full lg:mt-[-180px] mt-[-100px] gap-[10px]">
+                        {cardListSecontSectionMobile.map((text, index) => (
+                            <div key={index} className="flex flex-col items-start justify-between p-[20px] bg-white rounded-[10px] w-[200.33px] h-[232px] max-h-[232px] shadow-[0px_4px_20px_rgba(0,0,0,0.1)]">
+                                <span className={`${text.spanBackgroundColor} ${text.spanTextColor} rounded-[4px] p-[4px] font-[400] text-[14px]`}>
+                                    {text.span}
+                                </span>
+                                <h4>
+                                    {text.title}
+                                </h4>
+                                <p className="text-[12px] font-[400] text-[#0F172A]">
                                     {text.p}
                                 </p>
                                 <CustomButton text={text.button} className="pr-[12px] pl-[12px] pt-[8px] pb-[8px] rounded-[8px] border-[2px] border-[#2563EB] font-[500] text-[14px] text-[#2563EB] w-full"/>

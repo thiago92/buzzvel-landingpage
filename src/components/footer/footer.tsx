@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export default async function Footer() {
     return (
-        <section className="w-full h-[420px] bg-[#0F172A] flex items-center justify-center">
-            <div className="container flex flex-col items-center justify-center">
-                <div className="h-[324px] flex items-start justify-between w-full pt-[48px]">
+        <section className="w-full lg:h-[420px] h-[auto] bg-[#0F172A] flex items-center justify-center">
+            <div className="container flex flex-col items-center justify-center lg:p-0 p-[15px]">
+                <div className="lg:h-[324px] flex lg:flex-row flex-col items-start justify-between w-full pt-[48px] lg:gap-0 gap-[50px] lg:pb-0 pb-[40px]">
                     <div>
                         <Image src="/Column.png" alt="logo" width={173.33} height={35} />
                     </div>
@@ -54,9 +54,9 @@ export default async function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="border-t border-t-[#334155] w-full flex items-center justify-between h-[96px]">
-                    <div className="flex items-center justify-start">
-                        <p className="font-[400] text-[#E2E8F0] text-[16px] text-start ">
+                <div className="border-t border-t-[#334155] w-full flex lg:flex-row flex-col items-center justify-between lg:h-[96px] h-[142px] lg:pt-0 pt-[30px] lg:pb-0 pb-[20px]">
+                    <div className="flex items-center justify-start w-full">
+                        <p className="font-[400] text-[#E2E8F0] text-[16px] text-start w-full">
                             uteach @ 2023. All rights reserved.
                         </p>
                     </div>

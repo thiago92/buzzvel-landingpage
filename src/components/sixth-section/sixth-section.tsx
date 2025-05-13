@@ -10,10 +10,12 @@ import { cardListSixthSection } from "@/data/card-list-sixth-section"
 
 export function SixthSection() {
   return (
-    <section className="flex items-center justify-center w-full h-[614px]">
+    <section className="flex items-center justify-center w-full lg:h-[614px] h-[477px] lg:p-0 p-[15px]">
       <div className="container flex flex-col items-center">
         <div className="flex items-center justify-between w-full mb-[40px]">
-          <h2 className="text-2xl font-bold">What everyone says</h2>
+          <h3 className="text-2xl font-bold">
+            What everyone says
+          </h3>
         </div>
 
         <Carousel
@@ -25,7 +27,7 @@ export function SixthSection() {
               <CarouselItem
                 key={index}
                 className="
-                    basis-1/3 
+                    lg:basis-1/3 
                     p-[32px]
                     flex 
                     flex-col 

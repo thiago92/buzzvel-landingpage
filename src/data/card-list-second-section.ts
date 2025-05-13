@@ -24,3 +24,23 @@ export const cardListSecontSection = [
         button: "Take Lesson",
     },
 ];
+
+export const cardListSecontSectionMobile = [
+    {
+        span: "Featured.",
+        spanTextColor: "text-[#6B21A8]",
+        spanBackgroundColor: "bg-[#F3E8FF]",
+        title: "The map of mathematics",
+        p: "Egestas elit dui scelerisque ut eu purus aliquam vitae habitasse.",
+        button: "Take Lesson",
+    },
+    {
+        span: "Popular.",
+        spanTextColor: "text-[#1E40AF]",
+        spanBackgroundColor: "bg-[#DBEAFE]",
+        title: "Design for how people think",
+        p: "Aliquam ut euismod condimentum elementum ultricies volutpat sit non.",
+        button: "Take Lesson",
+    }
+];
+
