@@ -1,9 +1,23 @@
-import Image from "next/image"
+'use client'
 
-export default async function ThirdSection() {
+import Image from "next/image"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+
+
+export default function ThirdSection() {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
+
     return(
         <section className="flex items-center justify-center w-full bg-[#FACC15] lg:h-[575px] h-[684px] lg:mt-0 mt-[120px]">
-            <div className="container flex lg:flex-row flex-col items-center justify-center w-full h-full">
+            <motion.div
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 2, ease: "easeOut" }}   
+                className="container flex lg:flex-row flex-col items-center justify-center w-full h-full"
+            >
                 <div className="w-[5%] hidden lg:flex">
                     <Image src="/chevron-back.png" alt="chevron-back" width={48} height={48}/>
                 </div>
@@ -25,7 +39,7 @@ export default async function ThirdSection() {
                 <div className="w-[5%] hidden lg:flex">
                     <Image src="/chevron-forward.png" alt="chevron-forward" width={48} height={48}/>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

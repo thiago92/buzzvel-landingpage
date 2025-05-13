@@ -2,13 +2,22 @@
 
 import Image from "next/image"
 import CustomButton from "../custom-button/custom-button"
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
 export default function Menu() {
     const [isOpen, setIsOpen] = useState(false)
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
 
     return (
-        <header className="flex items-center justify-center bg-white w-full">
+        <motion.header 
+            ref={ref}
+            initial={{ opacity: 0, y: -40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex items-center justify-center bg-white w-full"
+        >
             {/* Desktop */}
             <div className="container hidden lg:flex flex-row items-center justify-between h-40">
                 <nav className="flex items-center p-4 bg-white gap-24">
@@ -62,6 +71,6 @@ export default function Menu() {
                     </div>
                 </div>
             </div>
-        </header>
+        </motion.header>
     )
 }

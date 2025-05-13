@@ -1,14 +1,29 @@
+'use client'
+
 import Image from "next/image"
 import CustomButton from "@/components/custom-button/custom-button"
 import { textListSecondSection } from "@/data/text-list-second-section"
 import { cardListSecontSection, cardListSecontSectionMobile } from "@/data/card-list-second-section"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
-export default async function SecondSection() {
+export default function SecondSection() {
+    const leftRef = useRef(null)
+    const rightRef = useRef(null)
+
+    const isLeftInView = useInView(leftRef, { once: true })
+    const isRightInView = useInView(rightRef, { once: true })
 
     return(
         <section className="flex items-center justify-center w-full h-[706.97px] lg:mt-0 mt-[120px]">
             <div className="container flex lg:flex-row flex-col items-center justify-between pt-20 pb-20 px-[15px]">
-                <div className="flex flex-col lg:w-[50%] w-full bg-[url(/Vector-14.png)] bg-no-repeat lg:bg-[length:275px_25px] lg:bg-[position:90px_45px] bg-[length:115px_8px] bg-[position:35px_20px] gap-10">
+                <motion.div 
+                    ref={leftRef}
+                    initial={{ opacity: 0, x: -80 }}
+                    animate={isLeftInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="flex flex-col lg:w-[50%] w-full bg-[url(/Vector-14.png)] bg-no-repeat lg:bg-[length:275px_25px] lg:bg-[position:90px_45px] bg-[length:115px_8px] bg-[position:35px_20px] gap-10"
+                >
                     <h3>An all-in-one app that makes it easier</h3>
                     <div>
                         {textListSecondSection.map((text, index) => (
@@ -31,8 +46,14 @@ export default async function SecondSection() {
                             imgPosition="right"
                         />
                     </div>
-                </div>
-                <div className="lg:w-1/2 w-full flex flex-col items-center justify-center">
+                </motion.div>
+                <motion.div
+                    ref={rightRef}
+                    initial={{ opacity: 0, x: 80 }}
+                    animate={isRightInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="lg:w-1/2 w-full flex flex-col items-center justify-center"
+                >
                     <Image
                         src="/desktop-blob.png"
                         alt="Group"
@@ -71,7 +92,7 @@ export default async function SecondSection() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

@@ -13,10 +13,7 @@ import Footer from "@/components/footer/footer";
 export default async function Home() {
   return (
     <>
-      <div className="z-10">
         <Menu />
-      </div>
-      <div className="z-1">
         <FirstSection />
         <SecondSection />
         <ThirdSection />
@@ -27,7 +24,6 @@ export default async function Home() {
         <EighthSection />
         <NinthSection />
         <Footer />
-      </div>
     </>
   );
 }

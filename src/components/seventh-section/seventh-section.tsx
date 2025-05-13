@@ -1,12 +1,27 @@
+'use client'
+
 import Image from "next/image"
 import CustomButton from "@/components/custom-button/custom-button"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
-export default async function SeventhSection() {
+export default function SeventhSection() {
+    const leftRef = useRef(null)
+    const rightRef = useRef(null)
+
+    const isLeftInView = useInView(leftRef, { once: true })
+    const isRightInView = useInView(rightRef, { once: true })
 
     return(
         <section className="flex items-center justify-center w-full lg:h-[706.97px] h-auto">
             <div className="container flex lg:flex-row flex-col items-center justify-between pt-20 pb-20">
-                <div className="flex flex-col justify-center lg:w-[50%] w-full bg-[url(/Vector-14.png)] bg-no-repeat bg-[length:275px_30px] bg-[position:380px_55px] gap-10 z-10 lg:p-0 p-[15px]">
+                <motion.div 
+                    ref={leftRef}
+                    initial={{ opacity: 0, x: -80 }}
+                    animate={isLeftInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 1, ease: "easeOut" }} 
+                    className="flex flex-col justify-center lg:w-[50%] w-full bg-[url(/Vector-14.png)] bg-no-repeat lg:bg-[length:240px_30px] lg:bg-[position:320px_45px] bg-[length:95px_10px] bg-[position:150px_35px] gap-10 z-10 lg:p-0 p-[15px]"
+                >
                     <h3 className="whitespace-nowrap">
                         All the cool features
                     </h3>
@@ -24,8 +39,14 @@ export default async function SeventhSection() {
                             imgPosition="right"
                         />
                     </div>
-                </div>
-                <div className="lg:w-1/2 w-[160%] flex flex-col items-center justify-center lg:mt-[-300px] mt-0 z-1">
+                </motion.div>
+                <motion.div
+                    ref={rightRef}
+                    initial={{ opacity: 0, x: 80 }}
+                    animate={isRightInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 1, ease: "easeOut" }} 
+                    className="lg:w-1/2 w-[160%] flex flex-col items-center justify-center lg:mt-[-300px] mt-0 z-1"
+                >
                     <Image
                         src="/group-2.png"
                         alt="Group"
@@ -47,7 +68,7 @@ export default async function SeventhSection() {
                             <CustomButton text="Take Lesson" className="pr-[12px] pl-[12px] pt-[8px] pb-[8px] rounded-[8px] border-[2px] border-[#2563EB] font-[500] text-[14px] text-[#2563EB] w-full"/>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
